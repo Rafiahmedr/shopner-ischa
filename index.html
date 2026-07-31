@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopner Ischa</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    background:#222;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:220px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    text-align:center;
+    padding:15px;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Shopner Ischa</h1>
+<p>আপনার বিশ্বস্ত অনলাইন শপ</p>
+</header>
+
+<nav>
+<a href="#">হোম</a>
+<a href="#">পণ্য</a>
+<a href="#">অফার</a>
+<a href="#">যোগাযোগ</a>
+</nav>
+
+<section class="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/200" alt="">
+<h3>টি-শার্ট</h3>
+<p>৳ ৮৯৯</p>
+<button>কার্টে যোগ করুন</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200" alt="">
+<h3>জুতা</h3>
+<p>৳ ১৯৯৯</p>
+<button>কার্টে যোগ করুন</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200" alt="">
+<h3>হেডফোন</h3>
+<p>৳ ১৪৯৯</p>
+<button>কার্টে যোগ করুন</button>
+</div>
+
+</section>
+
+<footer>
+© 2026 Shopner Ischa
+</footer>
+
+<script>
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach(function(button){
+    button.addEventListener("click", function(){
+        alert("✅ পণ্য কার্টে যোগ করা হয়েছে!");
+    });
+});
+</script>
+
+<script>
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach(function(button){
+    button.addEventListener("click", function(){
+        alert("✅ পণ্য কার্টে যোগ করা হয়েছে!");
+    });
+});
+</script>
+
+</body>
+</html>
