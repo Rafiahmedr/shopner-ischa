@@ -3,32 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shopner Chabi</title>
+<title>Shopner Ischa</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box}
 
 body{
-  font-family:Arial, sans-serif;
-  background:#f2f2f2;
+  margin:0;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#f5f5f5;
   color:#222;
 }
 
 header{
-  background:#1677ff;
+  background:linear-gradient(135deg,#0866ff,#1689ff);
   color:white;
   text-align:center;
-  padding:35px 15px;
+  padding:38px 15px;
 }
 
 header h1{
-  font-size:38px;
-  margin-bottom:10px;
+  font-size:42px;
+  margin:0;
 }
 
 header p{
@@ -37,138 +33,150 @@ header p{
 
 nav{
   background:#222;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:16px;
+  padding:15px;
+  text-align:center;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  font-size:18px;
+  margin:0 14px;
+  font-size:17px;
 }
 
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:25px 15px;
 }
 
-.section-title{
+/* CAMPAIGN */
+.campaign{
+  background:linear-gradient(135deg,#111,#333);
+  color:white;
+  border-radius:18px;
+  padding:28px 20px;
   text-align:center;
-  margin:15px 0 25px;
+  margin-bottom:30px;
+  box-shadow:0 5px 20px #aaa;
+}
+
+.campaign h2{
+  color:#ffd700;
   font-size:30px;
 }
 
+.prize{
+  background:white;
+  color:#222;
+  border-radius:14px;
+  padding:18px;
+  margin:12px auto;
+  max-width:600px;
+}
+
+.prize h3{
+  color:#1473ea;
+  margin:5px;
+}
+
+/* PRODUCTS */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:20px;
 }
 
 .product{
   background:white;
+  padding:18px;
   border-radius:15px;
-  padding:20px;
   text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,.12);
+  box-shadow:0 3px 15px #ccc;
 }
 
 .product img{
   width:100%;
-  height:230px;
-  object-fit:cover;
-  border-radius:12px;
-  background:#eee;
-}
-
-.product h3{
-  margin:15px 0 8px;
-  font-size:23px;
+  height:220px;
+  object-fit:contain;
+  border-radius:10px;
 }
 
 .price{
-  font-size:21px;
+  font-size:23px;
   font-weight:bold;
-  margin-bottom:15px;
+  color:#1473ea;
 }
 
 button{
-  border:0;
-  background:#1677ff;
+  background:#1473ea;
   color:white;
-  padding:13px 22px;
+  border:0;
   border-radius:8px;
-  font-size:17px;
+  padding:12px 20px;
+  font-size:16px;
   cursor:pointer;
 }
 
 button:hover{
-  background:#075dcc;
+  background:#075bc0;
 }
 
-.campaign{
-  margin-top:35px;
-  background:#111;
-  color:white;
-  border-radius:18px;
-  padding:30px 20px;
-  text-align:center;
-}
-
-.campaign h2{
-  color:#ffd400;
-  font-size:30px;
-  margin-bottom:15px;
-}
-
-.prizes{
-  margin:20px auto;
-  max-width:500px;
-  text-align:left;
-}
-
-.prizes div{
-  background:#222;
-  margin:10px 0;
-  padding:15px;
-  border-radius:10px;
-}
-
-.order-box{
+/* CART */
+.cart,.form,.delivery,.payment,.campaign-rules{
   background:white;
-  margin-top:30px;
-  padding:25px;
+  margin-top:25px;
+  padding:22px;
   border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,.1);
+  box-shadow:0 3px 15px #ccc;
 }
 
-input, textarea, select{
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+  padding:12px 0;
+}
+
+.total{
+  font-size:20px;
+  font-weight:bold;
+  margin-top:12px;
+}
+
+input,textarea,select{
   width:100%;
   padding:13px;
-  margin:8px 0 15px;
+  margin:7px 0 15px;
   border:1px solid #ccc;
   border-radius:8px;
   font-size:16px;
 }
 
-.cart{
-  margin-top:30px;
-  background:#fff;
-  padding:20px;
-  border-radius:15px;
+.whatsapp{
+  background:#25D366;
+  width:100%;
 }
 
-.cart-item{
-  padding:10px 0;
-  border-bottom:1px solid #ddd;
+.whatsapp:hover{
+  background:#1da851;
 }
 
-.total{
-  font-size:21px;
-  font-weight:bold;
-  margin:15px 0;
+/* LOGOS */
+.logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.logos img{
+  max-width:190px;
+  max-height:90px;
+  object-fit:contain;
 }
 
 footer{
@@ -178,193 +186,274 @@ footer{
   padding:25px;
   margin-top:40px;
 }
-
-@media(max-width:600px){
-  header h1{
-    font-size:32px;
-  }
-
-  nav{
-    gap:15px;
-  }
-
-  nav a{
-    font-size:15px;
-  }
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Shopner Chabi</h1>
+  <h1>Shopner Ischa</h1>
   <p>আপনার বিশ্বস্ত অনলাইন শপ</p>
 </header>
 
 <nav>
-  <a href="#home">হোম</a>
-  <a href="#products">পণ্য</a>
   <a href="#campaign">ক্যাম্পেইন</a>
+  <a href="#products">পণ্য</a>
+  <a href="#cart">কার্ট 🛒</a>
   <a href="#order">অর্ডার</a>
+  <a href="#delivery">ডেলিভারি</a>
 </nav>
 
+<div class="container">
 
-<div class="container" id="home">
+<!-- CAMPAIGN -->
+<section class="campaign" id="campaign">
 
-<h2 class="section-title" id="products">আমাদের পণ্য</h2>
+<h2>🎉 Shopner Ischa Special Campaign 🎉</h2>
+
+<p>
+আমাদের বিশেষ Promotional Giveaway Campaign-এ অংশগ্রহণের
+সুযোগ!
+</p>
+
+<div class="prize">
+<h3>🏆 ১ম পুরস্কার</h3>
+<p><b>Hero Xtreme 125cc Motorcycle</b></p>
+</div>
+
+<div class="prize">
+<h3>🥈 ২য় পুরস্কার</h3>
+<p>আকর্ষণীয় বিশেষ পুরস্কার</p>
+</div>
+
+<div class="prize">
+<h3>🥉 ৩য় পুরস্কার</h3>
+<p>আরও একটি আকর্ষণীয় পুরস্কার</p>
+</div>
+
+<p>
+📢 Campaign-এর বিস্তারিত যোগ্যতা, সময়সীমা ও
+নির্বাচনের নিয়ম নিচে দেওয়া হবে।
+</p>
+
+</section>
+
+<!-- PRODUCTS -->
+<h2 id="products">🛍️ আমাদের পণ্য</h2>
 
 <div class="products">
 
-<!-- FIRST PRODUCT -->
 <div class="product">
 
-  <!-- নিজের পণ্যের ছবি এখানে বসাবে -->
-  <img src="https://via.placeholder.com/500x400?text=BMW+Motorsport+Umbrella+%2B+Slipper"
-       alt="BMW Motorsport Umbrella and Slipper">
+<img src="umbrella.jpg" alt="Umbrella">
 
-  <h3>BMW Motorsport Logo Umbrella + Slipper</h3>
+<h2>Premium Umbrella</h2>
 
-  <p>
-    BMW Motorsport inspired logo design-এর ছাতা
-    এবং আরামদায়ক স্লিপার।
-  </p>
+<p>উন্নত মানের ছাতা</p>
 
-  <div class="price">৳ 899</div>
+<div class="price">৳599</div>
 
-  <button onclick="addToCart('BMW Motorsport Umbrella + Slipper',899)">
-    কার্টে যোগ করুন
-  </button>
+<br>
+
+<button onclick="addToCart('Premium Umbrella',599)">
+কার্টে যোগ করুন
+</button>
 
 </div>
 
 
-<!-- SECOND PRODUCT -->
 <div class="product">
 
-  <!-- পরে নিজের ছবি বসাবে -->
-  <img src="https://via.placeholder.com/500x400?text=Your+Product"
-       alt="Product">
+<img src="slipper.jpg" alt="Slipper">
 
-  <h3>আপনার দ্বিতীয় পণ্য</h3>
+<h2>Premium Slipper</h2>
 
-  <p>এখানে পণ্যের বিস্তারিত লিখবে।</p>
+<p>আরামদায়ক স্লিপার</p>
 
-  <div class="price">৳ 999</div>
+<div class="price">৳499</div>
 
-  <button onclick="addToCart('দ্বিতীয় পণ্য',999)">
-    কার্টে যোগ করুন
-  </button>
+<br>
+
+<button onclick="addToCart('Premium Slipper',499)">
+কার্টে যোগ করুন
+</button>
 
 </div>
 
 
-<!-- THIRD PRODUCT -->
 <div class="product">
 
-  <img src="https://via.placeholder.com/500x400?text=Your+Product"
-       alt="Product">
+<img src="product3.jpg" alt="Product">
 
-  <h3>আপনার তৃতীয় পণ্য</h3>
+<h2>নতুন পণ্য</h2>
 
-  <p>এখানে পণ্যের বিস্তারিত লিখবে।</p>
+<p>তোমার product details এখানে লিখবে</p>
 
-  <div class="price">৳ 1299</div>
+<div class="price">৳999</div>
 
-  <button onclick="addToCart('তৃতীয় পণ্য',1299)">
-    কার্টে যোগ করুন
-  </button>
+<br>
+
+<button onclick="addToCart('নতুন পণ্য',999)">
+কার্টে যোগ করুন
+</button>
 
 </div>
-
-</div>
-
-
-<!-- CAMPAIGN -->
-<div class="campaign" id="campaign">
-
-  <h2>🎉 Shopner Chabi Special Campaign 🎉</h2>
-
-  <p>
-    আমাদের বিশেষ promotional campaign-এ অংশগ্রহণ করুন।
-  </p>
-
-  <div class="prizes">
-
-    <div>
-      🏆 <b>১ম পুরস্কার:</b>
-      Hero Xtreme 125R
-    </div>
-
-    <div>
-      🥈 <b>২য় পুরস্কার:</b>
-      আকর্ষণীয় স্মার্টফোন
-    </div>
-
-    <div>
-      🥉 <b>৩য় পুরস্কার:</b>
-      বিশেষ গিফট প্যাক
-    </div>
-
-  </div>
-
-  <p>
-    Campaign-এর সম্পূর্ণ নিয়ম ও winner selection method
-    আগে থেকে প্রকাশ করা হবে।
-  </p>
 
 </div>
 
 
 <!-- CART -->
-<div class="cart">
+<div class="cart" id="cart">
 
-  <h2>🛒 আপনার কার্ট</h2>
+<h2>🛒 Shopping Cart</h2>
 
-  <div id="cartItems">
-    কার্ট এখনো খালি।
-  </div>
-
-  <div class="total">
-    মোট: ৳ <span id="total">0</span>
-  </div>
-
+<div id="cartItems">
+<p>কার্ট এখনো খালি।</p>
 </div>
-
-
-<!-- ORDER FORM -->
-<div class="order-box" id="order">
-
-<h2>📦 অর্ডার করুন</h2>
-
-<form onsubmit="submitOrder(event)">
-
-<label>আপনার নাম</label>
-<input type="text" id="name" required>
-
-<label>মোবাইল নম্বর</label>
-<input type="tel" id="phone" required>
-
-<label>ঠিকানা</label>
-<textarea id="address" rows="4" required></textarea>
-
-<label>ডেলিভারি এলাকা</label>
-
-<select id="area" onchange="deliveryCharge()" required>
-  <option value="">এলাকা নির্বাচন করুন</option>
-  <option value="70">যশোরের ভিতরে — ৳70</option>
-  <option value="120">যশোরের বাইরে — ৳120</option>
-</select>
 
 <div class="total">
-  পণ্য + ডেলিভারি: ৳ <span id="grandTotal">0</span>
+Product Total: ৳<span id="productTotal">0</span>
 </div>
 
-<button type="submit">
-  অর্ডার কনফার্ম করুন
+<div class="total">
+Delivery: ৳<span id="deliveryCost">0</span>
+</div>
+
+<div class="total">
+সর্বমোট: ৳<span id="grandTotal">0</span>
+</div>
+
+</div>
+
+
+<!-- CUSTOMER -->
+<div class="form" id="order">
+
+<h2>👤 Customer Information</h2>
+
+<label>আপনার নাম</label>
+
+<input
+id="customerName"
+type="text"
+placeholder="আপনার নাম লিখুন"
+>
+
+
+<label>মোবাইল নম্বর</label>
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="01XXXXXXXXX"
+>
+
+
+<label>সম্পূর্ণ ঠিকানা</label>
+
+<textarea
+id="customerAddress"
+rows="4"
+placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন">
+</textarea>
+
+
+<label>Delivery Location</label>
+
+<select id="location" onchange="updateDelivery()">
+
+<option value="">
+এলাকা নির্বাচন করুন
+</option>
+
+<option value="jashore">
+যশোরের ভিতরে — ৳70
+</option>
+
+<option value="outside">
+যশোরের বাইরে — ৳120
+</option>
+
+</select>
+
+
+<button
+class="whatsapp"
+onclick="sendOrder()">
+
+📱 WhatsApp-এ অর্ডার করুন
+
 </button>
 
-</form>
+</div>
+
+
+<!-- DELIVERY -->
+<div class="delivery" id="delivery">
+
+<h2>🚚 আমাদের Delivery Partners</h2>
+
+<p>
+আপনার অর্ডার আমাদের delivery partner-এর
+মাধ্যমে পাঠানো হবে।
+</p>
+
+<div class="logos">
+
+<img
+src="steadfast-logo.png"
+alt="SteadFast Courier"
+>
+
+<img
+src="pathao-logo.png"
+alt="Pathao Courier"
+>
+
+</div>
+
+<p>
+যশোরের ভিতরে: <b>৳70</b>
+<br>
+যশোরের বাইরে: <b>৳120</b>
+</p>
+
+</div>
+
+
+<!-- PAYMENT -->
+<div class="payment">
+
+<h2>💳 Online Payment Partner</h2>
+
+<p>
+নিরাপদ অনলাইন পেমেন্টের জন্য
+</p>
+
+<div class="logos">
+
+<img
+src="sslcommerz-logo.png"
+alt="SSLCOMMERZ"
+>
+
+</div>
+
+</div>
+
+
+<!-- CAMPAIGN RULES -->
+<div class="campaign-rules">
+
+<h2>📋 Campaign Rules</h2>
+
+<ul>
+<li>Campaign-এর নির্দিষ্ট সময়সীমা থাকবে।</li>
+<li>যোগ্যতার শর্ত campaign announcement-এ প্রকাশ করা হবে।</li>
+<li>বিজয়ী নির্বাচনের পদ্ধতি আগে থেকেই প্রকাশ করা হবে।</li>
+<li>ভুয়া তথ্য দিয়ে অংশগ্রহণ করলে অযোগ্য বলে গণ্য হতে পারে।</li>
+<li>Campaign-এর বিস্তারিত Terms & Conditions প্রযোজ্য।</li>
+</ul>
 
 </div>
 
@@ -372,148 +461,273 @@ footer{
 
 
 <footer>
-  <p>© 2026 Shopner Chabi</p>
-  <p>আপনার বিশ্বস্ত অনলাইন শপ</p>
+
+<h3>Shopner Ischa</h3>
+
+<p>
+আপনার বিশ্বস্ত অনলাইন শপ ❤️
+</p>
+
+<p>
+WhatsApp: +880 1577-010585
+</p>
+
 </footer>
 
 
 <script>
 
 let cart = [];
-let delivery = 0;
 
-function addToCart(name, price){
-
-  cart.push({
-    name:name,
-    price:price
-  });
-
-  showCart();
-
-  alert("✅ পণ্য কার্টে যোগ করা হয়েছে!");
-
-}
+let deliveryCost = 0;
 
 
-function showCart(){
+function addToCart(name,price){
 
-  let box = document.getElementById("cartItems");
+cart.push({
+name:name,
+price:price
+});
 
-  let total = 0;
+updateCart();
 
-  if(cart.length === 0){
-
-    box.innerHTML = "কার্ট এখনো খালি।";
-
-  }else{
-
-    box.innerHTML = "";
-
-    cart.forEach((item,index)=>{
-
-      total += item.price;
-
-      box.innerHTML += `
-        <div class="cart-item">
-          ${item.name} — ৳${item.price}
-          <button onclick="removeItem(${index})">
-            বাদ দিন
-          </button>
-        </div>
-      `;
-
-    });
-
-  }
-
-  document.getElementById("total").innerText = total;
-
-  deliveryCharge();
+alert("✅ পণ্য কার্টে যোগ করা হয়েছে!");
 
 }
 
 
 function removeItem(index){
 
-  cart.splice(index,1);
+cart.splice(index,1);
 
-  showCart();
-
-}
-
-
-function deliveryCharge(){
-
-  let area = document.getElementById("area").value;
-
-  delivery = area ? Number(area) : 0;
-
-  let total = cart.reduce((sum,item)=>sum + item.price,0);
-
-  document.getElementById("grandTotal").innerText =
-    total + delivery;
+updateCart();
 
 }
 
 
-function submitOrder(event){
+function updateCart(){
 
-  event.preventDefault();
+let cartItems =
+document.getElementById("cartItems");
 
-  if(cart.length === 0){
 
-    alert("⚠️ আগে একটি পণ্য কার্টে যোগ করুন।");
-    return;
+if(cart.length===0){
 
-  }
+cartItems.innerHTML =
+"<p>কার্ট এখনো খালি।</p>";
 
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let address = document.getElementById("address").value;
+}else{
 
-  let products = cart.map(item =>
-    item.name + " - ৳" + item.price
-  ).join("\n");
+cartItems.innerHTML="";
 
-  let total = cart.reduce((sum,item)=>sum + item.price,0);
+cart.forEach((item,index)=>{
 
-  let finalTotal = total + delivery;
+cartItems.innerHTML += `
 
-  let message =
-`🛍️ Shopner Chabi Order
+<div class="cart-item">
 
-👤 নাম: ${name}
+<span>
+${item.name} — ৳${item.price}
+</span>
 
-📱 মোবাইল: ${phone}
+<button onclick="removeItem(${index})">
+❌
+</button>
 
-📦 পণ্য:
-${products}
+</div>
 
-🚚 Delivery: ৳${delivery}
+`;
 
-💰 মোট: ৳${finalTotal}
-
-🏠 ঠিকানা:
-${address}`;
-
-  /*
-    এখানে নিজের WhatsApp নম্বর বসাবে।
-    উদাহরণ:
-    8801XXXXXXXXX
-  */
-
-  let whatsappNumber = "8801XXXXXXXXX";
-
-  let url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
-
-  window.open(url,"_blank");
+});
 
 }
+
+
+let total =
+cart.reduce(
+(sum,item)=>sum+item.price,0
+);
+
+
+document.getElementById(
+"productTotal"
+).innerText=total;
+
+
+document.getElementById(
+"deliveryCost"
+).innerText=deliveryCost;
+
+
+document.getElementById(
+"grandTotal"
+).innerText=
+total+deliveryCost;
+
+}
+
+
+function updateDelivery(){
+
+let location =
+document.getElementById(
+"location"
+).value;
+
+
+if(location==="jashore"){
+
+deliveryCost=70;
+
+}
+
+else if(location==="outside"){
+
+deliveryCost=120;
+
+}
+
+else{
+
+deliveryCost=0;
+
+}
+
+updateCart();
+
+}
+
+
+function sendOrder(){
+
+if(cart.length===0){
+
+alert(
+"❌ আগে একটি পণ্য কার্টে যোগ করুন।"
+);
+
+return;
+
+}
+
+
+let name =
+document.getElementById(
+"customerName"
+).value;
+
+
+let phone =
+document.getElementById(
+"customerPhone"
+).value;
+
+
+let address =
+document.getElementById(
+"customerAddress"
+).value;
+
+
+let location =
+document.getElementById(
+"location"
+).value;
+
+
+if(
+!name ||
+!phone ||
+!address ||
+!location
+){
+
+alert(
+"❌ সব তথ্য পূরণ করুন।"
+);
+
+return;
+
+}
+
+
+let productText="";
+
+
+cart.forEach(item=>{
+
+productText +=
+"• "+item.name+
+" — ৳"+item.price+
+"%0A";
+
+});
+
+
+let productTotal =
+cart.reduce(
+(sum,item)=>sum+item.price,0
+);
+
+
+let grandTotal =
+productTotal+deliveryCost;
+
+
+let deliveryText =
+location==="jashore"
+?
+"যশোরের ভিতরে"
+:
+"যশোরের বাইরে";
+
+
+let message=
+
+"🛍️ *SHOPNER ISCHA ORDER*%0A%0A"+
+
+"👤 Customer: "+
+name+"%0A"+
+
+"📞 Phone: "+
+phone+"%0A"+
+
+"📍 Address: "+
+address+"%0A%0A"+
+
+"🛒 *Products:*%0A"+
+productText+
+
+"%0A💰 Product Total: ৳"+
+productTotal+
+
+"%0A🚚 Delivery: "+
+deliveryText+
+" — ৳"+deliveryCost+
+
+"%0A💳 *Grand Total: ৳"+
+grandTotal+"*";
+
+
+let whatsappNumber=
+"8801577010585";
+
+
+let url=
+"https://wa.me/"+
+whatsappNumber+
+"?text="+message;
+
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+
+updateCart();
 
 </script>
 
